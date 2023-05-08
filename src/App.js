@@ -21,7 +21,7 @@ function LoadPosts() {
   },[])
   return (
     <div>
-      <h2>Post: {posts.length}</h2>
+      <h1>Post: {posts.length}</h1>
       <div className='div-style'>
       {
         posts.map(post => <Post title={post.title} body={post.body}></Post>)
