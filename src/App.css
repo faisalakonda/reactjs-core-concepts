@@ -36,3 +36,16 @@
     transform: rotate(360deg);
   }
 }
+
+.style-container{
+  background-color: rgb(7, 7, 7);
+  margin: 20px;
+  border-radius: 15px;
+  padding: 20px;
+  color: white;
+}
+
+.div-style{
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+}
