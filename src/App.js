@@ -8,6 +8,7 @@ function App() {
   return (
     <div className="App">
       <LoadPosts></LoadPosts>
+      <Watch></Watch>
     </div>
   );
 }
@@ -38,5 +39,27 @@ function Post(props) {
       </div>
   )
 }
-
+// Increase and Decrease count program 
+const Watch = () => {
+  const [steps, setSteps] = useState(0)
+  const increaseSteps = () => {
+    const nextSteps = steps + 1;
+    setSteps(nextSteps)
+  }
+  
+  const decreaseSteps = () => {
+    const reverseSteps = steps - 1;
+    setSteps(reverseSteps)
+  }
+  useEffect( ()=> {
+    console.log(steps)
+  },[steps])
+  return(
+    <div>
+      <h3>Count: {steps}</h3>
+      <button onClick={increaseSteps}>Increase</button>
+      <button onClick={decreaseSteps}>Decrease</button>
+    </div>
+  )
+}
 export default App;
